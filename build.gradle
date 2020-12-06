@@ -14,8 +14,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'com.otakusaikou.agriculture' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'agriculture'
+group = 'com.otakusaikou.plantcraft' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'plantcraft'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -44,7 +44,7 @@ minecraft {
             property 'forge.logging.console.level', 'info'
 
             mods {
-                agriculture {
+                plantcraft {
                     source sourceSets.main
                 }
             }
@@ -60,7 +60,7 @@ minecraft {
             property 'forge.logging.console.level', 'info'
 
             mods {
-                agriculture {
+                plantcraft {
                     source sourceSets.main
                 }
             }
@@ -76,10 +76,10 @@ minecraft {
             property 'forge.logging.console.level', 'info'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'agriculture', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'plantcraft', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                agriculture {
+                plantcraft {
                     source sourceSets.main
                 }
             }
@@ -120,7 +120,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "agriculture",
+            "Specification-Title": "PlantCraft",
             "Specification-Vendor": "FledgeShiu",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
