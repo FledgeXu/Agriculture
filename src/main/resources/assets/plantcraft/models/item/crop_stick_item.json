@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "plantcraft:item/crop_stick_item"
+  }
+}

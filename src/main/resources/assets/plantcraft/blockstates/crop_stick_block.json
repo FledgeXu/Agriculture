@@ -1,0 +1,12 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "plantcraft:block/crop_stick_block_base"
+      }
+    },
+    {   "when": { "joined": "true" },
+      "apply": { "model": "plantcraft:block/crop_stick_block_top", "uvlock": true }
+    }
+  ]
+}
