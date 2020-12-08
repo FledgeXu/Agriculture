@@ -16,17 +16,17 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
 public class CropStickBlock extends Block {
-    private static BooleanProperty isJoined = BooleanProperty.create("joined");
+    public static final BooleanProperty IS_JOINED = BooleanProperty.create("joined");
 
     public CropStickBlock(Properties properties) {
         super(properties);
         //When the Crop Stick placed, it should not be joined.
-        this.setDefaultState(getDefaultState().with(isJoined, false));
+        this.setDefaultState(getDefaultState().with(IS_JOINED, false));
     }
 
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(isJoined);
+        builder.add(IS_JOINED);
         super.fillStateContainer(builder);
     }
 
@@ -35,11 +35,11 @@ public class CropStickBlock extends Block {
         // We don't need to detect world.isRemote here.
         if (handIn == Hand.MAIN_HAND) {
             ItemStack mainHandStack = player.getItemStackFromSlot(EquipmentSlotType.MAINHAND);
-            if (!state.get(isJoined) && mainHandStack.getItem() == ItemRegistry.cropStickItem.get()) {
-                worldIn.setBlockState(pos, state.with(isJoined, true));
+            if (!state.get(IS_JOINED) && mainHandStack.getItem() == ItemRegistry.cropStickItem.get()) {
+                worldIn.setBlockState(pos, state.with(IS_JOINED, true));
                 mainHandStack.shrink(1);
-            } else if (state.get(isJoined)) {
-                worldIn.setBlockState(pos, state.with(isJoined, false));
+            } else if (state.get(IS_JOINED)) {
+                worldIn.setBlockState(pos, state.with(IS_JOINED, false));
                 //To get better Item spawn effect, we add 1 to Y.
                 worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY() + 1, pos.getZ(), new ItemStack(ItemRegistry.cropStickItem.get(), 1)));
             }

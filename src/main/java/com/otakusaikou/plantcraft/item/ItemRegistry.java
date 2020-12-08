@@ -13,4 +13,6 @@ public class ItemRegistry {
 
     //BlockItem
     public static final RegistryObject<BlockItem> cropStickItem = REGISTER.register("crop_stick_item", () -> new BlockItem(BlockRegistry.cropStickBlock.get(), new Item.Properties()));
+    public static final RegistryObject<BlockItem> waterTankItem = REGISTER.register("water_tank_item", () -> new BlockItem(BlockRegistry.oakWaterTankBlock.get(), new Item.Properties()));
+
 }

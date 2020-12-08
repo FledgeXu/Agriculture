@@ -1,0 +1,7 @@
+{
+  "parent": "plantcraft:block/water_tank/water_tank_east",
+  "textures": {
+    "0": "block/oak_planks",
+    "particle": "block/oak_planks"
+  }
+}

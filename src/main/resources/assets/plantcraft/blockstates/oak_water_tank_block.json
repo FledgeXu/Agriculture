@@ -1,0 +1,49 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": false
+      },
+      "apply": {
+        "model": "plantcraft:block/water_tank/oak_water_tank_block_down",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": false
+      },
+      "apply": {
+        "model": "plantcraft:block/water_tank/oak_water_tank_block_north",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": false
+      },
+      "apply": {
+        "model": "plantcraft:block/water_tank/oak_water_tank_block_east",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": false
+      },
+      "apply": {
+        "model": "plantcraft:block/water_tank/oak_water_tank_block_south",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": false
+      },
+      "apply": {
+        "model": "plantcraft:block/water_tank/oak_water_tank_block_west",
+        "uvlock": true
+      }
+    }
+  ]
+}

@@ -12,4 +12,6 @@ public class BlockRegistry {
     public static final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, PlantCraft.MOD_ID);
 
     public static final RegistryObject<CropStickBlock> cropStickBlock = REGISTER.register("crop_stick_block", () -> new CropStickBlock(AbstractBlock.Properties.create(Material.WOOD).hardnessAndResistance(3).doesNotBlockMovement()));
+    public static final RegistryObject<WaterTankBlock> oakWaterTankBlock = REGISTER.register("oak_water_tank_block", () -> new WaterTankBlock(AbstractBlock.Properties.create(Material.WOOD).hardnessAndResistance(3)));
+
 }
